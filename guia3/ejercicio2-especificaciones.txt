@@ -1,0 +1,54 @@
+absoluto(n: Z): Z {
+    req:{True}
+    asegura:{((n >= 0)->(resultado = n))^((n < 0)->(resultado = -n))}
+}
+
+maximoAbsoluto(x: Z, y:Z): Z {
+    req:{True}
+    asegura:{Si (absoluto(x)> absoluto(y)) entonces resultado = x}
+    asegura:{Si (absoluto(x)< absoluto(y)) entonces resultado = y}
+    asegura:{Si (absoluto(x) = absoluto(y)) entonces resultado = x o resultado = y}
+}
+
+maximo3(x :Z, y: Z, z: Z):Z {
+    req:{True}
+    asegura{ resultado = maximoAbsoluto(x,maximoAbsoluto(y,z))}
+}
+
+alguno0(x: R, y:R):Bool {
+    req:{True}
+    asegura:{resultado = ((x = 0) V ( y = 0 ))}
+}
+
+ambosSon0(x: R, y:R): Bool {
+    req:{True}
+    asegura:{resultado = ((x= 0)^(y= 0)) }
+}
+
+mismoIntervalo(x: R, y:R): Bool {
+    req:{True}
+    asegura:{resultado = ((x <=3)^(y <=3) V ( 3 < x,y <= 7) V ( 7 < x,y))}
+}
+
+sumaDistintos(x:Z,y:Z ,z:Z): Z{
+    req:{True}
+    asegura:{si x = y = z entonces resultado = x}
+    asegura:{si x = y != z V y = z != x entonces resultado = x + z}
+    asegura:{si x != y = z V x = z != y  entonces resultado = y + x}
+    asegura {si x != y != z entonces resultado = x + y + z}
+}
+
+esMultiploDe(x: Z, y: Z): Bool {
+    req:{x >= 0, y>=0}
+    asegura{ resultado = (x == k*y, k numero natural)}
+}
+
+digitoUnidades(x: Z): Z{
+    req:{True}
+    asegura:{resultado es el digito unidad de x}
+}
+
+digitoDecenas(x:Z):Z{
+    req:{x > 9}
+    asegura:{resultado es el digito en el lugar de las decenas de x}
+}
