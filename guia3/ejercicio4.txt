@@ -1,0 +1,54 @@
+prodInt(v:RxR, w:RxR): R{
+
+    req:{True}
+
+    asegura:{res = v1*w1+v2*w2}
+
+}
+
+todoMenor(v:RxR, w:RxR):Bool {
+
+    req:{True}
+
+    asegura:{res= v1<w1 ^ v2<w2}
+}
+
+distanciaPuntos(p:(R,R),r:(R,R)):R{
+    req:{True}
+    asegura:{resultado es la norma del vector p-r}
+}
+
+sumaTerna(v:ZxZxZ):Z{
+
+    req:{True}
+    asegura:{resultado = v1+v2+v3}
+}
+
+sumarSoloMultiplos(v:ZxZxZ, n: N): Z{
+
+req:{True}
+
+asegura:{ resultado = 0 + los elementos de v que sean multiplos de n}
+
+}
+
+posPrimerPar(v:(ZxZxZ)):Z{
+
+    req:{True}
+
+    asegura: {
+        (v1 par -> resultado = 1) V (v2 par -> resultado = 2) V (v3 par -> resultado = 3) V (resultado = 4)
+    }
+}
+
+crearPar(x:T1, y:T2):T1xT2{
+    req:{True}
+    asegura:{
+        resultado = (x, y)
+    }
+}
+
+invertirPar(v:t1xt2): t2xt1{
+    
+    asegura: { resultado = (v2,v1)}
+}
