@@ -1,0 +1,6 @@
+esDivisible(n:Z,m:Z):Bool
+{
+    req:{ n>= 0, m>= 0}
+
+    asegura: {res = True <-> (m divide a n)}
+}

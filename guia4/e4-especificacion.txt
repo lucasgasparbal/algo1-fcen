@@ -1,0 +1,5 @@
+sumaImpares(n:Z): Z
+{
+    req:{n >= 1}
+    asegura:{ resultado es la suma de los primeros n numeros impares}
+}
