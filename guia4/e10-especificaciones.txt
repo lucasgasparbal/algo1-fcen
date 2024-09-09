@@ -1,0 +1,47 @@
+a)
+
+f1(n:N0): N0{
+    
+    req:{True}
+    
+    asegura:{
+        resultado = SUM 2^i con 0<=i<=n
+    }
+
+}
+
+b)
+
+f2(n: N, q:R):R{
+
+    req:{True}
+
+    asegura:{
+        resultado = SUM q^i con 1<= i <= n
+    }
+}
+
+c)
+
+f3(n:N0,q:R): R {
+
+    req:{n > 0}
+
+    asegura:{
+        resultado = SUM q^i con 1<= i <= 2n
+    }
+
+}
+
+
+d)
+
+f4(n:N0,q:R): R {
+
+    req:{True}
+
+    asegura:{
+        resultado = SUM q^i con n<= i <= 2n
+    }
+
+}

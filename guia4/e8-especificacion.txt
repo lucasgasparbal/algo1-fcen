@@ -1,0 +1,5 @@
+sumaDigitos( n: N ) : N
+{
+    req: {True}
+    asegura: {resultado es la suma de los dígitos de n}
+}

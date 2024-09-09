@@ -1,0 +1,10 @@
+esCapicua(n:N0): Bool
+{
+    req:{
+        True
+    }
+
+    asegura:{
+        resultado = True <-> ( para todo i tal que 0<=i<cantDigitos(n), iesimoDigito(n,i+1) = iesimoDigito(n,cantDigitos(n)-i))
+    }
+}
