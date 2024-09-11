@@ -1,0 +1,10 @@
+dobleSumatoria(n:Z,m:Z):Z
+{
+    req:{
+        n > 0, m > 0
+    }
+
+    asegura:{
+        resultado = sumatoria de i^j con 1<= i <= n 1<= j <= m
+    }
+}

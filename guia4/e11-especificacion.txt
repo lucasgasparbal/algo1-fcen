@@ -1,0 +1,6 @@
+eAprox(n:Z):R{
+
+    req:{ n >= 0}
+
+    asegura:{ resultado es una aproximación al número e con exactitud proporcional al valor de n}
+}

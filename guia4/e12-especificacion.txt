@@ -1,0 +1,11 @@
+raizDe2Aprox(n:Z):R{
+
+    req:{
+        n > 0
+    }
+
+    asegura:{
+        dada la sucesión recursiva a'1 = 2, a'n = 2 +1/a'(n-1)
+        resultado = a'n - 1
+    }
+}

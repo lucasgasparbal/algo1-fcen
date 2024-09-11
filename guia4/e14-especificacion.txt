@@ -1,0 +1,10 @@
+sumaPotencias(q:N,n:N,m:N):N{
+
+    req:{
+        True
+    }
+
+    asegura:{
+        resultado es la suma de todas las potencias de la forma q^(a+b) con 1 <= a <= n y 1<= b <= m
+    }
+}

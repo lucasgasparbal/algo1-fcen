@@ -1,13 +1,8 @@
 iesimoDigito :: Int -> Int -> Int
 
-iesimoDigito n m    | m == 1 = mod n 10
-                    | otherwise = iesimoDigito (div n 10) (m-1)
+iesimoDigito n m =  mod (div  n (10^(cantDigitos n - m))) 10
 
 cantDigitos :: Int -> Int
 
-cantDigitos n = cantDigitosAux n 1
-
-cantDigitosAux :: Int -> Int -> Int
-
-cantDigitosAux n m | n < 10 = m
-                   | otherwise = cantDigitosAux (div n 10) m+1
+cantDigitos n | -10 < n && n < 10 = 1
+              | otherwise = 1 + cantDigitos (div n 10)
