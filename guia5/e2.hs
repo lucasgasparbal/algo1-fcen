@@ -65,3 +65,35 @@ elementosEn :: (Eq t) => [t] -> [t] -> Bool
 elementosEn [] lista2 = True
 
 elementosEn (x1:xs1) lista2 = (pertenece x1 lista2) && (elementosEn xs1 lista2) 
+
+
+capicua :: (Eq t) => [t] -> Bool
+
+capicua [] = True
+
+capicua [x] = True
+
+capicua lista | longitud lista <= 1 = True
+              | otherwise = head lista == ultimo lista && capicua (principio (tail lista))
+
+
+longitud :: [t] -> Integer
+
+longitud [] = 0
+longitud lista = 1 + longitud (tail lista)
+
+ultimo :: [t] -> t
+
+ultimo lista | longitud lista == 1 = head lista
+             | otherwise = ultimo (tail lista)
+
+principio :: [t] -> [t]
+
+principio lista | longitud lista == 1 = []
+                | otherwise = head lista : principio (tail lista) 
+
+
+reverso :: [t]->[t]
+
+reverso [] = []
+reverso lista = ultimo lista : reverso (principio lista)
