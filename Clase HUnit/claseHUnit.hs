@@ -27,6 +27,18 @@ testsPares = test [
 
     ]
 
+-- hacer funciones generar stock
+
+runGenerarStock = runTestTT testsGenerarStock
+
+testsGenerarStock = test [
+    "lista vacia" ~: generarStock [] ~?= [],
+    "lista con un elemento de distinto tipo" ~: esPermutacion (generarStock ["clavo","tornillo","pituto"]) [("clavo",1),("tornillo",1),("pituto",1)] ~?= True,
+    "lista con varios elementos del mismo tipo" ~: generarStock ["clavo","clavo","clavo","clavo"] ~?= [("clavo",4)],
+    "lista varios elementos varios tipos ordenados" ~: esPermutacion (generarStock ["clavo","clavo", "tornillo", "tornillo", "tornillo","pituto"]) [("clavo",2),("tornillo",3),("pituto",1)] ~?= True,
+    "lista varios elementos varios tipos desordenados" ~: esPermutacion (generarStock ["clavo","flotador","clavo", "tornillo","clavo", "tornillo", "tornillo","pituto","flotador","destornillador"]) [("clavo",3),("tornillo",3),("pituto",1),("flotador",2),("destornillador",1)] ~?= True
+    ]
+
 esPermutacion :: (Eq t) => [t] -> [t] -> Bool
 
 esPermutacion [] [] = True
@@ -41,5 +53,4 @@ quitar elem (x:xs) | elem == x = xs
                    | otherwise = x : quitar elem xs
 
 
--- hacer funciones generar stock
 

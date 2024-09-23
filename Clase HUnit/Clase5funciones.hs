@@ -42,4 +42,4 @@ quitarTodos :: (Eq t) => t -> [t] -> [t]
 quitarTodos _ [] = []
 
 quitarTodos elem (x:xs) | elem == x = quitarTodos x xs
-                        | otherwise = x : quitarTodos x xs
+                        | otherwise = x : quitarTodos elem xs
