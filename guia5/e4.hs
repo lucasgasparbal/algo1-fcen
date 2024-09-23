@@ -1,4 +1,3 @@
-import System.Win32 (xBUTTON1)
 sacarBlancosRepetidos :: [Char] -> [Char]
 
 sacarBlancosRepetidos [] = []
