@@ -1,0 +1,47 @@
+a) g es una variable global, los cambios dentro de la función modifican su valor fuera de ella.
+
+    ro(1) -> g = 1; res =  2
+    ro(1) -> g = 2; res = 3
+    ro(1) -> g = 3; res = 4
+
+b) g es un parámetro de tipo primitivo, se pasa por valor/copia.
+
+    rt(1, 0) -> res = 2
+    rt(1,0) -> res = 2
+    rt(1,0) -> res = 2
+
+c)
+    rt(x:int,g:int) -> int:
+        //estado a
+        g = g + 1
+        //estado b
+        // vale g = g@a + 1
+        return x + g
+
+
+    //estado pre
+    ro(x:int) -> int:
+     // estado a
+     global g
+     // estado b
+     //vale g = g@pre
+     g = g+1
+     //estado c
+     //vale g = g@pre + 1
+     return x + g
+     //estado pos
+     // vale g = g@pre + 1
+
+
+d)  
+    problema rt(in x:Z, in g:Z):Z{
+    req: {True}
+    asegura: {res = x+g}
+    } 
+
+    problema  ro(in x:Z, inout g:Z):Z{
+        req: {True}
+        modifica: g
+        asegura: {g = g@pre + 1}
+        asegura: {res =  x + g}
+    }
