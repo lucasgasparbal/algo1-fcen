@@ -286,8 +286,7 @@ def cantidad_digitos_impares(s:list[int])->int:
     digitos_impares_de_lista:list[int] = []
 
     for num in s:
-        for impar in digitos_impares(num):
-            digitos_impares_de_lista.append(impar)
+        digitos_impares_de_lista += digitos_impares(num)
 
     return len(digitos_impares_de_lista)
 
@@ -307,11 +306,11 @@ def digitos_impares(num:int)->list[int]:
     
     return digitos
 
-# print(cantidad_digitos_impares([1]))
-# print(cantidad_digitos_impares([2]))
-# print(cantidad_digitos_impares([1,2,3]))
-# print(cantidad_digitos_impares([54,53,21,19,35,47,4895]))
-# print(cantidad_digitos_impares([57, 2383, 812, 246]))
+print(cantidad_digitos_impares([1]))
+print(cantidad_digitos_impares([2]))
+print(cantidad_digitos_impares([1,2,3]))
+print(cantidad_digitos_impares([54,53,21,19,35,47,4895]))
+print(cantidad_digitos_impares([57, 2383, 812, 246]))
 
     
 
