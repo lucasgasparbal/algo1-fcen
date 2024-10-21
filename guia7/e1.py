@@ -306,11 +306,11 @@ def digitos_impares(num:int)->list[int]:
     
     return digitos
 
-print(cantidad_digitos_impares([1]))
-print(cantidad_digitos_impares([2]))
-print(cantidad_digitos_impares([1,2,3]))
-print(cantidad_digitos_impares([54,53,21,19,35,47,4895]))
-print(cantidad_digitos_impares([57, 2383, 812, 246]))
+# print(cantidad_digitos_impares([1]))
+# print(cantidad_digitos_impares([2]))
+# print(cantidad_digitos_impares([1,2,3]))
+# print(cantidad_digitos_impares([54,53,21,19,35,47,4895]))
+# print(cantidad_digitos_impares([57, 2383, 812, 246]))
 
     
 
