@@ -26,5 +26,5 @@ def realizar_operacion(operando2:float,operando1:float,tokenOperacion:str)->bool
         return operando1/operando2
     
         
-print(evaluar_expresion("3 4 + 5 * 2 -"))
-print(evaluar_expresion("4 5 + 3 /"))            
+# print(evaluar_expresion("3 4 + 5 * 2 -"))
+# print(evaluar_expresion("4 5 + 3 /"))            

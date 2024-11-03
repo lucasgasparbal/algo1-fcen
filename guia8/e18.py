@@ -21,6 +21,7 @@ def la_palabra_mas_frecuente(nombre_archivo:str)->tuple[str,int]:
         if  palabras_apariciones[palabra_mas_frecuente] < palabras_apariciones[key]:
             palabra_mas_frecuente = key
     
+    archivo.close()
     return [palabra_mas_frecuente,palabras_apariciones[palabra_mas_frecuente]]
 
 

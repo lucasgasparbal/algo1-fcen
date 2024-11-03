@@ -13,6 +13,8 @@ def agrupar_por_longitud(nombre_archivo:str)->dict[str,float]:
             res[len(token)] = 0
 
         res[len(token)] += 1
+    
+    archivo.close()
 
     return res
 

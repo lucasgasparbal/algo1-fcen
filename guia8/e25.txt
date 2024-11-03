@@ -1,0 +1,6 @@
+Esta frase fue agregada con la función agregar_frase_al_principio del ejercicio 25 de la guía 8
+Esto es un archivo de prueba para el ejercicio 24 de la guía 8 de la materia Introducción a la Programación cursada en la Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos Aires.
+Esta es la segunda linea del archivo.
+Y esta es la tercera.
+これは四のラインです.
+In my restless dreams, I see that town...
