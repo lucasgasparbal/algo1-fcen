@@ -2,7 +2,7 @@ import e16
 
 def la_palabra_mas_frecuente(nombre_archivo:str)->tuple[str,int]:
 
-    archivo = open(nombre_archivo,"r",encoding="utf-8")
+    archivo:TextIO  = open(nombre_archivo,"r",encoding="utf-8")
 
     contenido = archivo.read()
 

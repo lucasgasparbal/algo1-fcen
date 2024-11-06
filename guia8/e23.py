@@ -2,10 +2,10 @@ from queue import LifoQueue as Pila
 
 
 def invertir_lineas(nombre_archivo:str):
-    archivo = open(nombre_archivo,"r",encoding="utf-8")
-    invertido = open("reverso.txt","w",encoding="utf-8")
+    archivo:TextIO  = open(nombre_archivo,"r",encoding="utf-8")
+    invertido:TextIO  = open(nombre_archivo + "_reverso.txt","w",encoding="utf-8")
     pila_lineas:Pila = Pila()
-    for line in archivo:
+    for line in archivo.readlines():
         pila_lineas.put(line)
 
     texto:str = pila_lineas.get()+"\n"
@@ -18,4 +18,4 @@ def invertir_lineas(nombre_archivo:str):
     archivo.close()
     invertido.close()
 
-invertir_lineas("e18.txt")
+# invertir_lineas("e18.txt")

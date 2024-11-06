@@ -1,5 +1,5 @@
 def listar_palabras_de_archivo(nombre_archivo:str)->list:
-    archivo = open(nombre_archivo,mode="b+r")
+    archivo:BufferedRandom = open(nombre_archivo,mode="b+r")
     bytes = archivo.read()
     legibles:list[str] = []
     legible:str =""

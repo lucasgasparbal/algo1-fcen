@@ -1,9 +1,9 @@
 def clonar_sin_comentarios(nombre_archivo:str):
-    archivo = open(nombre_archivo,"r",encoding="utf-8")
+    archivo:TextIO = open(nombre_archivo,"r",encoding="utf-8")
 
-    clon = open(nombre_archivo+"_clon.txt","w",encoding="utf-8")
+    clon:TextIO = open(nombre_archivo+"_sin_comentarios.txt","w",encoding="utf-8")
 
-    for line in archivo:
+    for line in archivo.readlines():
         if not es_comentario(line):
             clon.write(line)
 
@@ -17,5 +17,6 @@ def es_comentario(linea:str)->bool:
             return True
         if char != " ":
             return False
+    return False
         
 # clonar_sin_comentarios("e15.py")

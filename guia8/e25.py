@@ -1,8 +1,8 @@
 def agregar_frase_al_principio(nombre_archivo:str,frase:str):
-    archivo = open(nombre_archivo,"r",encoding="utf-8")
+    archivo:TextIO  = open(nombre_archivo,"r",encoding="utf-8")
     texto:str = frase + "\n"
     
-    for line in archivo:
+    for line in archivo.readlines():
         texto += line
 
     archivo.close()
@@ -14,4 +14,4 @@ def agregar_frase_al_principio(nombre_archivo:str,frase:str):
     archivo.close()
 
 
-# agregar_frase_al_principio("e25.txt","Esta frase fue agregada con la función agregar_frase_al_principio del ejercicio 25 de la guía 8")
+agregar_frase_al_principio("e25.txt","Esta frase fue agregada con la función agregar_frase_al_principio del ejercicio 25 de la guía 8")

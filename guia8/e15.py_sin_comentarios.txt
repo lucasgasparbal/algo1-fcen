@@ -1,0 +1,36 @@
+
+from queue import Queue as Cola
+import e8
+
+def atencion_a_clientes(clientes:Cola[tuple[str,int,bool,bool]])->Cola[tuple[str,int,bool,bool]]:
+
+    aux:Cola[tuple[str,int,bool,bool]] = Cola()
+    res:Cola[tuple[str,int,bool,bool]] = Cola()
+    prioritarios:Cola[tuple[str,int,bool,bool]] = Cola()
+    preferenciales:Cola[tuple[str,int,bool,bool]] = Cola()
+    otros:Cola[tuple[str,int,bool,bool]] = Cola()
+
+    while not clientes.empty():
+        elem = clientes.get()
+        aux.put(elem)
+        if elem[3]:
+            prioritarios.put(elem)
+        elif elem[2]:
+            preferenciales.put(elem)
+        else:
+            otros.put(elem)
+
+    for cola in [prioritarios,preferenciales,otros]:
+        while not cola.empty():
+            res.put(cola.get())
+    
+    while not aux.empty():
+        clientes.put(aux.get())
+    
+    return res
+
+
+
+
+
+

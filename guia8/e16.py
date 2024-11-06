@@ -1,11 +1,11 @@
-def agrupar_por_longitud(nombre_archivo:str)->dict[str,float]:
-    archivo = open(nombre_archivo,"r")
+def agrupar_por_longitud(nombre_archivo:str)->dict[int,int]:
+    archivo:TextIO  = open(nombre_archivo,"r")
 
     contenido:str = archivo.read()
 
-    tokens:list[str] = contenido.split()
+    tokens:list[str] = tokenizar(contenido)
 
-    res:dict[str,float] = {}
+    res:dict[int,int] = {}
     for token in tokens:
         longitud:int = len(token)
 
@@ -18,7 +18,22 @@ def agrupar_por_longitud(nombre_archivo:str)->dict[str,float]:
 
     return res
 
+
+def tokenizar(texto:str) -> list[str]:
+    res:list[str] = []
+    token:str = ""
+    for char in texto:
+        if char == " " or char =="\n" or char =="\t":
+            if len(token) > 0:
+                res.append(token)
+            token = ""
+        else:
+            token += char
     
+    if len(token) > 0:
+        res.append(token)
+    
+    return res
 
 def pertenece(l:list,x)->bool:
     for elem in l:
