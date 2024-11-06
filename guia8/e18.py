@@ -4,9 +4,9 @@ def la_palabra_mas_frecuente(nombre_archivo:str)->tuple[str,int]:
 
     archivo:TextIO  = open(nombre_archivo,"r",encoding="utf-8")
 
-    contenido = archivo.read()
+    contenido:str = archivo.read()
 
-    tokens:list[str] = contenido.split()
+    tokens:list[str] = e16.tokenizar(contenido)
 
     palabras_apariciones:dict[str,int] = {}
     for token in tokens:
