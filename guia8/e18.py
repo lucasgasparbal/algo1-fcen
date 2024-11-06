@@ -1,6 +1,6 @@
 import e16
 
-def la_palabra_mas_frecuente(nombre_archivo:str)->tuple[str,int]:
+def la_palabra_mas_frecuente(nombre_archivo:str)->str:
 
     archivo:TextIO  = open(nombre_archivo,"r",encoding="utf-8")
 
@@ -22,7 +22,7 @@ def la_palabra_mas_frecuente(nombre_archivo:str)->tuple[str,int]:
             palabra_mas_frecuente = key
     
     archivo.close()
-    return [palabra_mas_frecuente,palabras_apariciones[palabra_mas_frecuente]]
+    return palabra_mas_frecuente
 
 
 print(la_palabra_mas_frecuente("e18.txt"))
